@@ -521,14 +521,12 @@ body {
 .clients-list {
   display: flex;
   margin-bottom: 0;
+  margin-right: -30px;
 }
 
 .clients-list .item {
   width: calc(100% / 6 - 30px);
   min-height: 92px;
-}
-
-.clients-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -682,6 +680,8 @@ body {
 .footer-form {
   display: flex;
   align-items: flex-end;
+
+  margin-top: 12px;
   height: 87px;
 }
 
@@ -703,7 +703,7 @@ body {
 
   background-color: var(--third-background-color);
 
-  min-width: 295px;
+  min-width: 358px;
 }
 
 .footer-form > .form-btn {
@@ -780,8 +780,8 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 
-  min-height: 581px;
-  min-width: 528px;
+  height: 581px;
+  width: 528px;
   border-radius: 4px;
 
   background-color: #fff;
@@ -807,6 +807,14 @@ body {
   background-color: #fff;
 
   cursor: pointer;
+}
+
+.modal-btn .icon {
+  transition: fill 250ms var(--cubic);
+}
+
+.modal-btn:hover .icon {
+  fill: var(--accent-color);
 }
 
 .modal-form {
@@ -849,9 +857,8 @@ body {
 }
 
 .modal-form > .form-field:nth-child(6) {
-  /* display: flex;
-  align-items: center; */
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 28px;
 }
 
@@ -873,7 +880,8 @@ body {
   > .form-field:nth-child(6)
   > .form-checkbox:checked
   ~ .checkbox-icon {
-  background-image: url(../img/icon-check.svg);
+  background-image: url(../img/icon-checkbox.svg);
+  background-size: cover;
 
   border-color: transparent;
   background-color: var(--accent-color);
