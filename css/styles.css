@@ -832,15 +832,57 @@ body {
 }
 
 .modal-form > .form-field:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .modal-form > .form-field:nth-child(5) {
   margin-bottom: 20px;
 }
 
+.modal-form > .form-field:nth-child(5) > .form-label {
+  color: var(--second-text-color);
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
 .modal-form > .form-field:nth-child(6) {
+  /* display: flex;
+  align-items: center; */
+  display: block;
   margin-bottom: 28px;
+}
+
+.modal-form > .form-field:nth-child(6) > .form-checkbox {
+  appearance: none;
+}
+
+.modal-form > .form-field:nth-child(6) > .checkbox-icon {
+  display: inline-block;
+  margin-right: 8.38px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  width: 15px;
+  height: 16px;
+}
+
+.modal-form
+  > .form-field:nth-child(6)
+  > .form-checkbox:checked
+  ~ .checkbox-icon {
+  background-image: url(../img/icon-check.svg);
+
+  border-color: transparent;
+  background-color: var(--accent-color);
+}
+
+.modal-form > .form-field:nth-child(6) .form-excerpt {
+  color: #2196f3;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .modal-form > .form-field:nth-child(-n + 4) {
@@ -848,11 +890,6 @@ body {
 }
 
 .modal-form > .form-field:nth-child(-n + 4) > .form-label {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-
   color: var(--second-text-color);
 
   font-weight: normal;
@@ -875,7 +912,6 @@ body {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
 
   transition: fill 250ms var(--cubic);
 }
@@ -896,7 +932,7 @@ body {
   padding-bottom: 12px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-top: 10px;
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
