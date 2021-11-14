@@ -880,8 +880,10 @@ body {
   > .form-field:nth-child(6)
   > .form-checkbox:checked
   ~ .checkbox-icon {
-  background-image: url(../img/icon-checkbox.svg);
+  background-image: url(../img/icon-check.svg);
   background-size: cover;
+  background-origin: border-box;
+  background-position: center;
 
   border-color: transparent;
   background-color: var(--accent-color);
